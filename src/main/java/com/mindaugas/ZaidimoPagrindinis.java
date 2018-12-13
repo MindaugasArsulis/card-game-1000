@@ -17,6 +17,7 @@ public class ZaidimoPagrindinis {
         Statymai st = new Statymai();
         ZaidimoLogika1 zl1 = new ZaidimoLogika1();
         ZaidimoLogika2 zl2 = new ZaidimoLogika2();
+        ArTeisingaKorta cg = new ArTeisingaKorta();
 
         // zaideju priskirimas
         Zaidejai p1 = new Zaidejai();
@@ -94,8 +95,9 @@ public class ZaidimoPagrindinis {
                         System.out.println(p1.getSetOfCards().get(firstplcard - 1));
                         System.out.println(p2.getName() + " place your card");
                         int secondplcard = myScan.nextInt();
+                        secondplcard = cg.arBlogasStatymas(p2.getName(), p1.getSetOfCards(), p2.getSetOfCards(), firstplcard, secondplcard);
                         System.out.println(p2.getSetOfCards().get(secondplcard - 1));
-                        glass = zl1.pirmasDeda(p1.getName(), p2.getName(), p1.getSetOfCards(), p2.getSetOfCards(), firstplcard, secondplcard);
+                        glass = zl1.formuleKortai(p1.getName(), p2.getName(), p1.getSetOfCards(), p2.getSetOfCards(), firstplcard, secondplcard);
                         p1.getSetOfCards().remove(firstplcard - 1);
                         p2.getSetOfCards().remove(secondplcard - 1);
                         pirmoscore += glass[0];
@@ -111,8 +113,9 @@ public class ZaidimoPagrindinis {
                         System.out.println(p2.getSetOfCards().get(firstplcard - 1));
                         System.out.println(p1.getName() + " place your card");
                         int secondplcard = myScan.nextInt();
+                        secondplcard = cg.arBlogasStatymas(p1.getName(), p2.getSetOfCards(), p1.getSetOfCards(), firstplcard, secondplcard);
                         System.out.println(p1.getSetOfCards().get(secondplcard - 1));
-                        glass = zl2.antrasDeda(p2.getName(), p1.getName(), p2.getSetOfCards(), p1.getSetOfCards(), firstplcard, secondplcard);
+                        glass = zl2.formuleKortai(p2.getName(), p1.getName(), p2.getSetOfCards(), p1.getSetOfCards(), firstplcard, secondplcard);
                         p1.getSetOfCards().remove(secondplcard - 1);
                         p2.getSetOfCards().remove(firstplcard - 1);
                         pirmoscore += glass[1];
@@ -132,8 +135,9 @@ public class ZaidimoPagrindinis {
                         System.out.println(p1.getSetOfCards().get(firstplcard - 1));
                         System.out.println(p2.getName() + " place your card");
                         int secondplcard = myScan.nextInt();
+                        secondplcard = cg.arBlogasStatymas(p2.getName(), p1.getSetOfCards(), p2.getSetOfCards(), firstplcard, secondplcard);
                         System.out.println(p2.getSetOfCards().get(secondplcard - 1));
-                        glass = zl1.pirmasDeda(p1.getName(), p2.getName(), p1.getSetOfCards(), p2.getSetOfCards(), firstplcard, secondplcard);
+                        glass = zl1.formuleKortai(p1.getName(), p2.getName(), p1.getSetOfCards(), p2.getSetOfCards(), firstplcard, secondplcard);
                         p1.getSetOfCards().remove(firstplcard - 1);
                         p2.getSetOfCards().remove(secondplcard - 1);
                         pirmoscore += glass[0];
@@ -149,8 +153,9 @@ public class ZaidimoPagrindinis {
                         System.out.println(p2.getSetOfCards().get(firstplcard - 1));
                         System.out.println(p1.getName() + " place your card");
                         int secondplcard = myScan.nextInt();
+                        secondplcard = cg.arBlogasStatymas(p1.getName(), p2.getSetOfCards(), p1.getSetOfCards(), firstplcard, secondplcard);
                         System.out.println(p1.getSetOfCards().get(secondplcard - 1));
-                        glass = zl2.antrasDeda(p2.getName(), p1.getName(), p2.getSetOfCards(), p1.getSetOfCards(), firstplcard, secondplcard);
+                        glass = zl2.formuleKortai(p2.getName(), p1.getName(), p2.getSetOfCards(), p1.getSetOfCards(), firstplcard, secondplcard);
                         p1.getSetOfCards().remove(secondplcard - 1);
                         p2.getSetOfCards().remove(firstplcard - 1);
                         pirmoscore += glass[1];

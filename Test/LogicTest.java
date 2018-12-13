@@ -39,32 +39,32 @@ public class LogicTest {
         reiksme [0] = 80;
         reiksme [1] = 14;
         reiksme [2] = 2;
-        assertArrayEquals((zaidimoLogika1.pirmasDeda("vardas", "kitasvardas", stikline, stikline1, 2, 1)), (reiksme));
+        assertArrayEquals((zaidimoLogika1.formuleKortai("vardas", "kitasvardas", stikline, stikline1, 2, 1)), (reiksme));
 
         reiksme [0] = 0;
         reiksme [1] = 13;
         reiksme [2] = 2;
-        assertArrayEquals((zaidimoLogika1.pirmasDeda("vardas", "kitasvardas", stikline, stikline1, 1, 1)), (reiksme));
+        assertArrayEquals((zaidimoLogika1.formuleKortai("vardas", "kitasvardas", stikline, stikline1, 1, 1)), (reiksme));
 
         reiksme [0] = 0;
         reiksme [1] = 14;
         reiksme [2] = 2;
-        assertArrayEquals((zaidimoLogika1.pirmasDeda("vardas", "kitasvardas", stikline, stikline1, 3, 4)), (reiksme));
+        assertArrayEquals((zaidimoLogika1.formuleKortai("vardas", "kitasvardas", stikline, stikline1, 3, 4)), (reiksme));
 
         reiksme [0] = 14;
         reiksme [1] = 0;
         reiksme [2] = 1;
-        assertArrayEquals((zaidimoLogika1.pirmasDeda("vardas", "kitasvardas", stikline1, stikline, 2, 1)), (reiksme));
+        assertArrayEquals((zaidimoLogika1.formuleKortai("vardas", "kitasvardas", stikline1, stikline, 2, 1)), (reiksme));
 
         reiksme [0] = 64;
         reiksme [1] = 0;
         reiksme [2] = 1;
-        assertArrayEquals((zaidimoLogika1.pirmasDeda("vardas", "kitasvardas", stikline, stikline1, 4, 5)), (reiksme));
+        assertArrayEquals((zaidimoLogika1.formuleKortai("vardas", "kitasvardas", stikline, stikline1, 4, 5)), (reiksme));
 
         reiksme [0] = 4;
         reiksme [1] = 0;
         reiksme [2] = 1;
-        assertArrayEquals((zaidimoLogika1.pirmasDeda("vardas", "kitasvardas", stikline1, stikline, 6, 6)), (reiksme));
+        assertArrayEquals((zaidimoLogika1.formuleKortai("vardas", "kitasvardas", stikline1, stikline, 6, 6)), (reiksme));
     }
 
 

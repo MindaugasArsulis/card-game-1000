@@ -16,7 +16,7 @@
 
 
     <build>
-        <sourceDirectory>src/main</sourceDirectory>
+        <sourceDirectory>src</sourceDirectory>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>

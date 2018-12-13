@@ -101,7 +101,7 @@ public class OperacijosSuKortomis {
         return stikline;
     }
 
-        // kortu prisikirimas pirmam zaidejui, jei jis laimi bet
+        // kortu prisikirimas pirmam zaidejui, jei jis laimi /bet/
     public List<KortuVertes> priskirtiKortosPirmam(String name, List<KortuVertes> p1, List<KortuVertes> c1, List<KortuVertes> c2) {
 
         System.out.println(name + " you are the highest bidder. Please choose one pack of cards on the table");
@@ -154,7 +154,7 @@ public class OperacijosSuKortomis {
 
     }
 
-        // kortu priskirimas antram zaidejui jei jis laimi bet
+        // kortu priskirimas antram zaidejui jei jis laimi /bet/
     public List<KortuVertes> priskirtiKortasAntram(String name, List<KortuVertes> p2, List<KortuVertes> c1, List<KortuVertes> c2) {
 
         // antras laimi

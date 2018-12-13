@@ -85,7 +85,8 @@ public class ZaidimoPagrindinis {
 
             // zaidimas su turimom kortom, kol jos baigiasi
             if (p1.getBet() > p2.getBet()) {
-                count = 1;
+                count = 1;} else {
+                count = 2;}
                 do {
                     while (count == 1 && p1.getSetOfCards().size() > 0){
                         System.out.println(p1.getName() + " your cards are " + p1.getSetOfCards());
@@ -123,47 +124,6 @@ public class ZaidimoPagrindinis {
                         count = glass[2];
                     }
                 } while (p1.getSetOfCards().size() >= 1);
-            } else {
-                count = 2;
-
-                do {
-                    while (count == 1 && p1.getSetOfCards().size() > 0){
-                        System.out.println(p1.getName() + " your cards are " + p1.getSetOfCards());
-                        System.out.println(p2.getName() + " your cards are " + p2.getSetOfCards());
-                        System.out.println(p1.getName() + " place your card");
-                        int firstplcard = myScan.nextInt();
-                        System.out.println(p1.getSetOfCards().get(firstplcard - 1));
-                        System.out.println(p2.getName() + " place your card");
-                        int secondplcard = myScan.nextInt();
-                        secondplcard = cg.arBlogasStatymas(p2.getName(), p1.getSetOfCards(), p2.getSetOfCards(), firstplcard, secondplcard);
-                        System.out.println(p2.getSetOfCards().get(secondplcard - 1));
-                        glass = zl1.formuleKortai(p1.getName(), p2.getName(), p1.getSetOfCards(), p2.getSetOfCards(), firstplcard, secondplcard);
-                        p1.getSetOfCards().remove(firstplcard - 1);
-                        p2.getSetOfCards().remove(secondplcard - 1);
-                        pirmoscore += glass[0];
-                        antroscore += glass[1];
-                        count = glass[2];
-                    }
-
-                    while (count == 2 && p2.getSetOfCards().size() > 0) {
-                        System.out.println(p1.getName() + " your cards are " + p1.getSetOfCards());
-                        System.out.println(p2.getName() + " your cards are " + p2.getSetOfCards());
-                        System.out.println(p2.getName() + " place your card");
-                        int firstplcard = myScan.nextInt();
-                        System.out.println(p2.getSetOfCards().get(firstplcard - 1));
-                        System.out.println(p1.getName() + " place your card");
-                        int secondplcard = myScan.nextInt();
-                        secondplcard = cg.arBlogasStatymas(p1.getName(), p2.getSetOfCards(), p1.getSetOfCards(), firstplcard, secondplcard);
-                        System.out.println(p1.getSetOfCards().get(secondplcard - 1));
-                        glass = zl2.formuleKortai(p2.getName(), p1.getName(), p2.getSetOfCards(), p1.getSetOfCards(), firstplcard, secondplcard);
-                        p1.getSetOfCards().remove(secondplcard - 1);
-                        p2.getSetOfCards().remove(firstplcard - 1);
-                        pirmoscore += glass[1];
-                        antroscore += glass[0];
-                        count = glass[2];
-                    }
-                } while (p1.getSetOfCards().size() >= 1);
-            }
 
             pirmoPower = p1.getPower();
             antroPower = p2.getPower();

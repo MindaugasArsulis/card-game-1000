@@ -1,9 +1,8 @@
 package main.java.com.mindaugas;
 
 import java.util.List;
-import java.util.Scanner;
 
-public class ZaidimoLogika2 implements Iskelimas {
+public class ZaidimoLogika2 implements FormuleKortai {
 
     public int [] formule1 (String player1, String player2, List<KortuVertes> p1, List<KortuVertes> p2, int statymas1, int statymas2, int pirmoscore) {
 

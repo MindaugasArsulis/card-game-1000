@@ -19,9 +19,10 @@ public class BlackJack {
         swingLayoutDemo.showCardLayoutDemo();
     }
     private void prepareGUI(){
-        mainFrame = new JFrame("Java SWING Examples");
-        mainFrame.setSize(400,400);
-        mainFrame.setLayout(new GridLayout(3, 1));
+        mainFrame = new JFrame("1000 CardGame");
+        mainFrame.setSize(1000,1000);
+        mainFrame.setLayout(new GridLayout(4, 1));
+
 
         headerLabel = new JLabel("",JLabel.CENTER );
         statusLabel = new JLabel("",JLabel.CENTER);
@@ -41,16 +42,27 @@ public class BlackJack {
         mainFrame.setVisible(true);
     }
     private void showCardLayoutDemo(){
-        headerLabel.setText("Layout in action: CardLayout");
+        headerLabel.setText("Welcome to the game!");
+//        headerLabel.setText("<html><h1>Heading</h1><br/>Some other text here.</html>");
+//        headerLabel.setFont(new Font("Myriad Pro",Font.PLAIN,15));
 
         final JPanel panel = new JPanel();
-        panel.setBackground(Color.CYAN);
+        panel.setBackground(Color.WHITE);
         panel.setSize(300,300);
 
         CardLayout layout = new CardLayout();
         layout.setHgap(10);
         layout.setVgap(10);
         panel.setLayout(layout);
+
+        JButton b=new JButton(new ImageIcon("C:\\Users\\minda\\Downloads\\icon.jpg"));
+        b.setBounds(70,150,100, 56);
+        mainFrame.add(b);
+//        mainFrame.setSize(300,400);
+        mainFrame.setLayout(null);
+        mainFrame.setVisible(true);
+        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 
         JPanel buttonPanel = new JPanel(new FlowLayout());
         buttonPanel.add(new JButton("OK"));

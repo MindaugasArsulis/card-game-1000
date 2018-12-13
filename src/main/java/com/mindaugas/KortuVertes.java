@@ -44,7 +44,7 @@ public enum KortuVertes {
     public int getVerte() {
         return verte;
     }
-    public void setVerte(int verte) {
-        this.verte = verte;
-    }
+//    public void setVerte(int verte) {
+//        this.verte = verte;
+//    }
 }

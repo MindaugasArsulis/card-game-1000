@@ -44,7 +44,7 @@ public class ZaidimoLogika2 {
         }
         if (count > 0) {
             while (p1.get(statymas1 - 1).getSpalva() != p2.get(statymas2 - 1).getSpalva()) {
-                System.out.println(player2 + " please place appropriate card type!");
+                System.out.println(player2 + " please place appropriate card type!" + p2.get(statymas2-1) + " does not fit! You need to place " + p1.get(statymas1 - 1).getSpalva());
                 statymas2 = manoSkaneris.nextInt();
             }
             if (p1.get(statymas1 - 1).getVerte() > p2.get(statymas2 - 1).getVerte()) {

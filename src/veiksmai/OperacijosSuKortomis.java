@@ -1,4 +1,6 @@
-package main.java.com.mindaugas;
+package veiksmai;
+
+import pirminiaiduomenys.KortuVertes;
 
 import java.util.*;
 

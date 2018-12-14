@@ -1,6 +1,7 @@
-package main.java.com.mindaugas;
+package veiksmai;
 
-import java.awt.print.Book;
+import pirminiaiduomenys.KortuVertes;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -8,7 +9,7 @@ public class ArTeisingaKorta {
 
     Scanner manoSkaneris = new Scanner(System.in);
 
-    public int arBlogasStatymas(String player2, List<KortuVertes> p1, List<KortuVertes>p2, int statymas1, int statymas2) {
+    public int arTeisingasStatymas(String player2, List<KortuVertes> p1, List<KortuVertes>p2, int statymas1, int statymas2) {
         int count = 0;
         for (int i = 0; i < p1.size(); i++) {
             if (p1.get(statymas1 - 1).getSpalva() == p2.get(i).getSpalva()) {

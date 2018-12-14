@@ -1,4 +1,4 @@
-package main.java.com.mindaugas;
+package pirminiaiduomenys;
 
 public enum KortuSpalva {
 

@@ -1,4 +1,4 @@
-package main.java.com.mindaugas;
+package pagrindinis;
 
 public class Main {
 

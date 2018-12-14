@@ -1,4 +1,7 @@
-package main.java.com.mindaugas;
+package veiksmai;
+
+import pagrindinis.ZaidimoPagrindinis;
+import pirminiaiduomenys.Zaidejai;
 
 import java.util.*;
 

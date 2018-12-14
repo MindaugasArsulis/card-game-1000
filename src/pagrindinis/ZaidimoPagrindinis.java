@@ -1,4 +1,9 @@
-package main.java.com.mindaugas;
+package pagrindinis;
+
+import pirminiaiduomenys.Dalintojas;
+import pirminiaiduomenys.KortuVertes;
+import pirminiaiduomenys.Zaidejai;
+import veiksmai.*;
 
 import java.util.*;
 
@@ -15,8 +20,8 @@ public class ZaidimoPagrindinis {
         // klasiu pavertimas i objektus
         OperacijosSuKortomis d = new OperacijosSuKortomis();
         Statymai st = new Statymai();
-        ZaidimoLogika1 zl1 = new ZaidimoLogika1();
-        ZaidimoLogika2 zl2 = new ZaidimoLogika2();
+        Logika1Zaidejas zl1 = new Logika1Zaidejas();
+        Logika2Zaidejas zl2 = new Logika2Zaidejas();
         ArTeisingaKorta cg = new ArTeisingaKorta();
 
         // zaideju priskirimas
@@ -96,7 +101,7 @@ public class ZaidimoPagrindinis {
                         System.out.println(p1.getSetOfCards().get(firstplcard - 1));
                         System.out.println(p2.getName() + " place your card");
                         int secondplcard = myScan.nextInt();
-                        secondplcard = cg.arBlogasStatymas(p2.getName(), p1.getSetOfCards(), p2.getSetOfCards(), firstplcard, secondplcard);
+                        secondplcard = cg.arTeisingasStatymas(p2.getName(), p1.getSetOfCards(), p2.getSetOfCards(), firstplcard, secondplcard);
                         System.out.println(p2.getSetOfCards().get(secondplcard - 1));
                         glass = zl1.formuleKortai(p1.getName(), p2.getName(), p1.getSetOfCards(), p2.getSetOfCards(), firstplcard, secondplcard);
                         p1.getSetOfCards().remove(firstplcard - 1);
@@ -114,7 +119,7 @@ public class ZaidimoPagrindinis {
                         System.out.println(p2.getSetOfCards().get(firstplcard - 1));
                         System.out.println(p1.getName() + " place your card");
                         int secondplcard = myScan.nextInt();
-                        secondplcard = cg.arBlogasStatymas(p1.getName(), p2.getSetOfCards(), p1.getSetOfCards(), firstplcard, secondplcard);
+                        secondplcard = cg.arTeisingasStatymas(p1.getName(), p2.getSetOfCards(), p1.getSetOfCards(), firstplcard, secondplcard);
                         System.out.println(p1.getSetOfCards().get(secondplcard - 1));
                         glass = zl2.formuleKortai(p2.getName(), p1.getName(), p2.getSetOfCards(), p1.getSetOfCards(), firstplcard, secondplcard);
                         p1.getSetOfCards().remove(secondplcard - 1);

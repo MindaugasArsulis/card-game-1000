@@ -1,8 +1,10 @@
-package main.java.com.mindaugas;
+package veiksmai;
+
+import pirminiaiduomenys.KortuVertes;
 
 import java.util.List;
 
-public class ZaidimoLogika2 implements FormuleKortai {
+public class Logika1Zaidejas implements FormuleKortuMacui {
 
     public int [] formule1 (String player1, String player2, List<KortuVertes> p1, List<KortuVertes> p2, int statymas1, int statymas2, int pirmoscore) {
 
@@ -13,7 +15,7 @@ public class ZaidimoLogika2 implements FormuleKortai {
         if (p1.get(statymas1 - 1).getVerte() > p2.get(statymas2 - 1).getVerte()) {
             System.out.println(player1 + " takes the cards");
             pirmoscore += p1.get(statymas1 - 1).getVerte() + p2.get(statymas2 - 1).getVerte();
-            stikline[0] = pirmoscore; stikline[1] = antroscore; stikline[2] = 2;
+            stikline[0] = pirmoscore; stikline[1] = antroscore; stikline[2] = 1;
             return stikline;
             //
             // p1 takes cards
@@ -21,7 +23,7 @@ public class ZaidimoLogika2 implements FormuleKortai {
         } else {
             System.out.println(player2 + " takes the cards");
             antroscore += p1.get(statymas1 - 1).getVerte() + p2.get(statymas2 - 1).getVerte();
-            stikline[0] = pirmoscore; stikline[1] = antroscore; stikline[2] = 1;
+            stikline[0] = pirmoscore; stikline[1] = antroscore; stikline[2] = 2;
             return stikline;
             // p2 takes cards
             //kartojasi
@@ -32,13 +34,14 @@ public class ZaidimoLogika2 implements FormuleKortai {
 
         int antroscore = 0;
         int [] stikline = new int[3];
+
             System.out.println(player1 + " takes the cards");
             pirmoscore += p1.get(statymas1 - 1).getVerte() + p2.get(statymas2 - 1).getVerte();
-            stikline[0] = pirmoscore; stikline[1] = antroscore; stikline[2] = 2;
+            stikline[0] = pirmoscore; stikline[1] = antroscore; stikline[2] = 1;
             return stikline;
             // pirmas laimi 1 partija
             // kartojasi
-    }
+        }
 
     @Override
     public int[] formuleKortai(String player1, String player2, List<KortuVertes> p1, List<KortuVertes> p2, int statymas1, int statymas2) {
@@ -47,8 +50,8 @@ public class ZaidimoLogika2 implements FormuleKortai {
         int rezultatas = 0;
 
         if (p1.get(statymas1-1).equals(KortuVertes.KARALIUS_P)) {
-           kortosverte = KortuVertes.DAMA_P;
-           rezultatas = 40;
+            kortosverte = KortuVertes.DAMA_P;
+            rezultatas = 40;
         } else if (p1.get(statymas1-1).equals(KortuVertes.KARALIUS_K)) {
             kortosverte = KortuVertes.DAMA_K;
             rezultatas = 60;
@@ -77,7 +80,7 @@ public class ZaidimoLogika2 implements FormuleKortai {
         } else if (p1.get(statymas1 - 1).getSpalva() == p2.get(statymas2 - 1).getSpalva()) {
             return formule1(player1, player2, p1, p2, statymas1, statymas2, pirmoscore);
             // jeigu deda kitos rusies
-        } else{
+        } else {
             return formule2(player1, player2, p1, p2, statymas1, statymas2, pirmoscore);
         }
     }

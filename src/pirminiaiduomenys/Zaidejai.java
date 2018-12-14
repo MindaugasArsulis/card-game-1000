@@ -1,4 +1,4 @@
-package main.java.com.mindaugas;
+package pirminiaiduomenys;
 
 public class Zaidejai extends Dalintojas {
     private String name;

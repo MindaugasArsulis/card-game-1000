@@ -1,5 +1,5 @@
-import pirminiaiduomenys.KortuVertes;
-import veiksmai.OperacijosSuKortomis;
+import com.mindaugas.cardgame1000.pirminiaiduomenys.KortuVertes;
+import com.mindaugas.cardgame1000.veiksmai.OperacijosSuKortomis;
 import org.junit.Before;
 import org.junit.Test;
 import java.util.ArrayList;
